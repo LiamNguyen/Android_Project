@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.donguyen.gasolineconsumption.InputActivity"
+    android:background="#ffffff">
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Date"
+        android:textSize="30sp"
+        android:id="@+id/inputDate"
+        android:layout_alignBottom="@+id/dateTxtField"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Odometer"
+        android:textSize="30sp"
+        android:id="@+id/inputOdometer"
+        android:layout_below="@+id/inputDate"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="170sp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Fuel amount"
+        android:textSize="30sp"
+        android:id="@+id/inputAmount"
+        android:layout_below="@+id/inputOdometer"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="10"
+        android:id="@+id/dateTxtField"
+        android:hint="dd/mm/yyyy"
+        android:layout_marginTop="88dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@+id/odometerTxtField" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/odometerTxtField"
+        android:hint="Value in km"
+        android:layout_below="@+id/dateTxtField"
+        android:layout_toEndOf="@+id/inputDate" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/amountTxtField"
+        android:hint="Value in liters"
+        android:layout_below="@+id/inputOdometer"
+        android:layout_alignStart="@+id/dateTxtField" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/submitData"
+        android:onClick="submitData"
+        android:layout_below="@+id/amountTxtField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:textSize="20sp"
+        android:id="@+id/textView2"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff0000" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/back"
+        android:onClick="backToMain"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
